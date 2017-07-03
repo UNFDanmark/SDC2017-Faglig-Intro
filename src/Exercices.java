@@ -32,10 +32,6 @@ public class Exercices {
 		return 0;
 	}
 
-	// #########################################################
-	// ##### Stop her - resten er til efter 2. forelæsning #####
-	// #########################################################
-
     /**
      * Opgave 5.1 - Gammel nok til at komme ind på diskotekerne i Gaden?
      * Input: alder som heltal
