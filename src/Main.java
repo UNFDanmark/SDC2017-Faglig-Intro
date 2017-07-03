@@ -1,21 +1,84 @@
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
 
 	public static void main(String[] args) {
+
+
+        // Dette er filen hvorfra vi tester jeres resultater.
+        // I skal ikke kigge i den - det er snyd, for man kan finde svarene her.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		// Opg 1
 		Exercices types = new Exercices();
 
 		String output = changeOut(types, "print");
-		System.out.println(responce(1, output.length() > 0) + " " + output);
+		System.out.println(response(1, output.length() > 0) + " " + output);
 
 		// Opg 2
 		HashMap<Class<?>, Integer> seen = new HashMap<Class<?>, Integer>();
@@ -35,29 +98,29 @@ public class Main {
 				}
 			}
 		}
-		System.out.println(responce(2, !seen.containsValue(0)));
+		System.out.println(response(2, !seen.containsValue(0)));
 
 
 		// Opg 3
-		System.out.println(responce(3, types.expression(13, 66, 4) == 849 && types.expression(43, 22, 5) == 908));
+		System.out.println(response(3, types.expression(13, 66, 4) == 849 && types.expression(43, 22, 5) == 908));
 
 
 		// Opg 4
-		System.out.println(responce(4, types.bmi(70, 1.8) == 70/(1.8*1.8) && types.bmi(60, 1.5) == 60/(1.5*1.5)));
+		System.out.println(response(4, types.bmi(70, 1.8) == 70/(1.8*1.8) && types.bmi(60, 1.5) == 60/(1.5*1.5)));
 
 
 		// Opg 5.1
-		System.out.println(responce(5.1, types.bouncerDK(20) && !types.bouncerDK(16)));
+		System.out.println(response(5.1, types.bouncerDK(20) && !types.bouncerDK(16)));
 
 		// Opg 5.2
-		System.out.println(responce(5.2, !types.bouncerUSA(20) && types.bouncerUSA(40)));
+		System.out.println(response(5.2, !types.bouncerUSA(20) && types.bouncerUSA(40)));
 
 		// Opg 5.3
-		System.out.println(responce(5.3, types.groupDancing(40, 99, 300000) && !types.groupDancing(30, 17, 20)));
+		System.out.println(response(5.3, types.groupDancing(40, 99, 300000) && !types.groupDancing(30, 17, 20)));
 
 
 		// Opg 6.1
-		System.out.println(responce(6.1, !types.flotBouncer1(12.3, false)
+		System.out.println(response(6.1, !types.flotBouncer1(12.3, false)
 				&& types.flotBouncer1(9.0, true)
 				&& types.flotBouncer1(19.5, false)
 				&& types.flotBouncer1(18.0, false)
@@ -66,14 +129,14 @@ public class Main {
 
 
 		// Opg 6.2
-		System.out.println(responce(6.2, !types.flotBouncer2(30.0, false)
+		System.out.println(response(6.2, !types.flotBouncer2(30.0, false)
 				&& !types.flotBouncer2(40.0, true)
 				&& types.flotBouncer2(2.4, true)
 				&& types.flotBouncer2(39.99999999, true)
 				&& !types.flotBouncer2(50.6, false)));
 
 		// Opg 6.3
-		System.out.println(responce(6.3, types.flotBouncer3(16, true)
+		System.out.println(response(6.3, types.flotBouncer3(16, true)
 				&& !types.flotBouncer3(17, false)
 				&& !types.flotBouncer3(15.99, true)
 				&& !types.flotBouncer3(25, false)
@@ -84,7 +147,7 @@ public class Main {
 
 
 		// Opg7
-		System.out.println(responce(7, types.cashExchange(5000000, "DKK", "EUR") == 5000000 * 13.4476541 / 100
+		System.out.println(response(7, types.cashExchange(5000000, "DKK", "EUR") == 5000000 * 13.4476541 / 100
 				&& types.cashExchange(types.cashExchange(5000000, "DKK", "EUR"), "EUR", "DKK") == 5000000
 				&& types.cashExchange(23, "USD", "EUR") == 23 * 87.535014 / 100
 				&& types.cashExchange(types.cashExchange(23, "USD", "EUR"), "EUR", "USD") == 23
@@ -96,13 +159,13 @@ public class Main {
 
 
 		// Opg8
-		System.out.println(responce(8, types.factorial(20) == 2432902008176640000L
+		System.out.println(response(8, types.factorial(20) == 2432902008176640000L
 				&& types.factorial(10) == 3628800));
 	}
 
 
 
-	public static String responce(int opg, boolean bool) {
+	public static String response(int opg, boolean bool) {
 		if(bool) {
 			return "Exercise " + opg + " is correct!";
 		} else {
@@ -110,7 +173,7 @@ public class Main {
 		}
 	}
 
-	public static String responce(double opg, boolean bool) {
+	public static String response(double opg, boolean bool) {
 		if(bool) {
 			return "Exercise " + opg + " is correct!";
 		} else {

@@ -118,6 +118,7 @@ public class Exercices {
     /**
      * Opgave 7
      * Valutaomregner: 100 DKK er 15.3626 USD, 100 DKK er 13.4476541 EUR og 100 USD er 87.535014 EUR.
+     * Input er et beløs, den valuta beløbet er i og den valuta som beløbet skal omregnes til.
      */
 	public double cashExchange(double amount, String from, String to) {
 		return 0;
@@ -126,7 +127,7 @@ public class Exercices {
 
 	/**
 	 * Opgave 8 - Fakultet
-	 * Udfyld metoden så den returnerer n!, brug ikke n over 10000. (HINT, brug recursion)
+	 * Udfyld metoden så den returnerer n!, brug ikke n over 10000. (HINT, brug rekursion)
 	 */
 	public long factorial(long n) {
 		return 0;
